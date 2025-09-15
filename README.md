@@ -13,6 +13,14 @@ A modern, AI-powered resume builder built with the MERN stack. Create profession
 - 📄 **PDF Export**: Download your resume as a professional PDF
 - 🚀 **Fast & Modern**: Built with the latest web technologies
 
+## Personal Info (Demo / Default Profile)
+
+- **Name:** Arbaz Ahmad Ansari  
+- **Email:** arbazahmadansari03@gmail.com  
+- **Phone:** 7983297137  
+- **Education:** MCA Student, Galgotias University  
+- **Skills:** MERN Stack Developer  
+
 ## Tech Stack
 
 ### Backend
