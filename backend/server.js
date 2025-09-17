@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
-const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/ai-resume-builder';
+const mongoURI = process.env.MONGO_URI; // <-- only Atlas URI
 mongoose.connect(mongoURI)
   .then(() => console.log('✅ MongoDB connected successfully ✅'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
