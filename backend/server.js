@@ -14,10 +14,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
-const mongoURI = process.env.MONGO_URI; // <-- only Atlas URI
+const mongoURI = process.env.MONGO_URI;
+if (!mongoURI) {
+  console.error('❌ MONGO_URI is not defined!');
+  process.exit(1); // Server start nahi hoga
+}
+
 mongoose.connect(mongoURI)
   .then(() => console.log('✅ MongoDB connected successfully ✅'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
+
 
 // API routes
 app.use('/api/auth', require('./routes/auth'));
